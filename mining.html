@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining App</title>
+    <link rel="stylesheet" href="mining.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BITMINING</h1>
+        <div>Balance: <span id="balance">0</span> coins</div>
+        <div>Mining Rate: <span id="mine-rate">1</span> coins per second</div>
+        <div>Balance in Naira: ₦<span id="naira-balance">0</span></div>
+
+        <button id="mine-button">Mine</button>
+        <button onclick="buyUpgrade(20, 1)">Buy Upgrade (Cost: 20 coins)</button>
+
+        <input type="text" id="account-number" placeholder="Enter account number" required />
+        <input type="text" id="account-name" placeholder="Enter account name" required />
+        <input type="text" id="bank-name" placeholder="Enter bank name" required />
+        <button id="withdraw-button">Withdraw</button>
+    </div>
+
+    <!-- Modal for withdrawal success -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2>Withdrawal Successful</h2>
+            <p id="receipt"></p>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
